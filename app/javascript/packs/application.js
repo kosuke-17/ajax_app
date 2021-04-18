@@ -10,7 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../test")
 require("../memo") // 追記する
-
+require("../quiz")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
