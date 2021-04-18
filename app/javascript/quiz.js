@@ -30,24 +30,23 @@ const quiz = [
  ];
  
  const quizLength = quiz.length;
- let quizIn = 0;
+ let quizIndex = 0;
  let score = 0;
  
  const $button = document.getElementsByTagName('button');
+ console.log($button.length);
  let buttonLength = $button.length;
-
+ 
 
  //クイズの問題文、選択肢を定義
  onload= function(){
-   document.getElementById('js-question').textContent = quiz[quizIn].question;
-   let buttonIn = 0;
-   
-   while(buttonIn < buttonLength){
-   $button[buttonIn].textContent = quiz[quizIn].answers[buttonIn];
+   document.getElementById('js-question').textContent = quiz[quizIndex].question;
+   let buttonIndex = 0;
+    while(buttonIndex < buttonLength){
+   $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
    //ここに命令
-   buttonIn++;
-   
-   }
+    buttonIndex++;
+    }
  }
  
  const clickHandler = (e) => {
